@@ -1,7 +1,16 @@
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header';
+import Home from './components/Home';
+import User from './components/User';
 function App() {
   return (
-    <h2>Hello World</h2>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/user' element={<User />} />
+      </Routes>
+    </Router>
   );
 }
 
